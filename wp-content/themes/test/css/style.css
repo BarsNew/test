@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.container {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+    min-height: 700px;
+}
+
+.c-footer {
+    min-height: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-logo {
+    border-radius: 50%;
+}
+
+.navigation ul {
+    display: flex;
+}
+
+.navigation ul li {
+    list-style: none;
+    position: relative;
+}
+
+.navigation ul li a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #036;
+    padding: 15px;
+}
+
+.navigation a:hover {
+    background-color: rgb(239, 241, 240);
+    border-radius: 15px;
+    color:rgb(126, 74, 121);
+}
+.navigation li > ul {
+    display: none;
+}
+
+.navigation li:hover > ul {
+    display: block;
+    position: absolute;
+    /* width: 150px; */
+    white-space: nowrap;
+    z-index: 100;
+}
+
+.navigation li:hover > ul li {
+    background-color: rgb(239, 241, 240);
+    border-radius: 15px;
+    margin: 10px 0;    
+}
+
+
+.navigation li > ul a {
+    width: calc(100% - 20px);
+}
+
+
+.navigation li > ul ul {
+    position: absolute;
+    top: -20%;
+    left: 105%;
+}
+
+#menu-checkbox {
+    display: none;
+}
+
+
+
+#check {
+    display: none;
+    width: 33px;
+    height: 27px;
+
+}
+
+.check_closing {
+    position: relative;
+    display: none;
+}
+
+.check_closing span {
+    display: inline-block;
+    width: 20px;
+    height: 5px;
+    background-color: #000;
+    z-index: 4;
+    position: absolute;
+}
+
+.check_closing span:first-child {
+    transform: rotate(45deg);
+}
+
+.check_closing span:last-child {
+    transform: rotate(-45deg);
+}
+
+
+
+.searchform input {
+    padding: 3px;
+}
+
+
+
+.header_search_form {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.post_title {
+    margin-bottom: 15px;
+}
+
+.form-contact p {
+    margin-top: 15px; 
+}
+
+.post_entry {
+    margin: 30px 0;
+}
+
+.entry_title {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.entry_more_link {
+    margin: 3px 0;
+}
+
+.post_pagination {
+    text-align: center;
+}    
+
+.line {
+    width: 50%;
+    size: 12px;
+    color: #000;
+    margin: 15px 0;
+}
+
+.post_entry_date {
+    margin-bottom: 5px;
+}
+
+.post_entry_image {
+    margin-top: 15px;
+    display: block;
+}
+
+
+
+.post_image .wp-post-image{
+    width: 80px;
+    height: 80px;
+}
+
+.post_date {
+    margin-top: 10px;
+}
+
+.post_content, .post_categories {
+    margin: 10px 0;
+}
+
+.post_comments {
+    margin: 20px 0;
+}
+
+.comment-form p {
+    margin: 10px;
+}
+
+.required-field-message {
+    display: block;
+    margin: 10px 0;
+}
+
+
+
+
+.table-price {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-price td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.pos-center {
+    text-align: center;
+}
+
+.sidebar li {
+    list-style: none;
+}
+
+
+
+.footer-sidebar {
+    margin: 15px 0 0 0;
+    text-align: center;
+}
+
+.footer-sidebar li {
+    list-style: none;
+}
+
+.footer-sidebar .menu {
+    margin-bottom: 15px;
+}
+
+.footer-sidebar .wp-block-columns {
+    margin-bottom: 0px;
+}
+
+
+
+.container404 {
+    height: 60vh;
+    font-family: monospace;
+}
+
+.return {
+    position: absolute;
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    top: 25%;
+    left: 20%;
+    padding: 20px 40px;
+    border: 2px solid #000;
+    box-shadow: 10px 10px 0 #ee1b52;
+    transition: .1s;
+}
+
+.return:hover {
+    box-shadow: -10px -10px 0 #69c9d0;
+}
+
+.numberError {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error {
+    color: #000;
+    margin: 0;
+    font-size: 350px;
+    letter-spacing: 10px;
+}
+
+.error::before, .error::after {
+    content: attr(data-text);
+    position: absolute;
+
+    z-index: -10;
+}
+
+.error::before {
+    color: #ee1b52;
+    animation: glitch 1s infinite;
+}
+
+.error::after {
+    color: #69c9d0;
+    animation: glitch 2s infinite;
+}
+
+.notFound {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    padding: 0 30px;
+    border-left: 20px solid #ee1b52;
+    border-right: 20px solid #69c9d0;
+}
+
+@keyframes glitch {
+    0% {
+        top: -5px;
+        left: -3px;
+    }
+    25% {
+        top: 0px;
+        left: -3px;
+    }
+    50% {
+        top: 5px;
+        left: 3px;
+    }
+    75% {
+        top: 0px;
+        left: 5px;
+    }
+    100% {
+        top: -5px;
+        left: -3px;
+    }
+}
+
